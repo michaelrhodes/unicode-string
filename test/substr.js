@@ -1,0 +1,16 @@
+var test = require('tape')
+var banish = require('to-zalgo/banish')
+var substr = require('../substr')
+var f = require('./fixtures')
+
+test('substr works', function (assert) {
+  assert.equal(banish(substr(f.darkness, 0, 2)), 'he')
+  assert.equal(banish(substr(f.darkness, 3)), 'cometh')
+  assert.equal(substr(f.beast, 0, 3), '6️⃣6️⃣6️⃣')
+  assert.equal(substr(f.beast, 5), 'the number of the beast')
+  assert.equal(substr(f.hell, 0), f.hell)
+  assert.equal(substr(f.hell, 0, 1), '🇫🇷')
+  assert.equal(substr(f.hell, 2, 1), 't')
+  assert.equal(substr(f.hell, 2, -1), '')
+  assert.end()
+})
