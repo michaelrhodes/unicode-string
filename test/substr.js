@@ -12,5 +12,6 @@ test('substr works', function (assert) {
   assert.equal(substr(f.hell, 0, 1), '🇫🇷')
   assert.equal(substr(f.hell, 2, 1), 't')
   assert.equal(substr(f.hell, 2, -1), '')
+  assert.equal(substr('•••🇨🇦••••', 3, 1), '🇨🇦')
   assert.end()
 })
