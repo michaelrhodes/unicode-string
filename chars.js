@@ -6,7 +6,7 @@ module.exports = function (string) {
     .replace(multichars, sub)
     .split('')
 
-  var m  
+  var m
   var ri = 0
   while (m = multichars.exec(string)) {
     m.index -= ri
