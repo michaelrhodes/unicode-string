@@ -1,6 +1,6 @@
 {
   "name": "unicode-string",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "a collection of unicode-aware string functions",
   "main": "index.js",
   "dependencies": {
