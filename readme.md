@@ -15,6 +15,7 @@ $ npm install unicode-string
 ```js
 var length = require('unicode-string/length')
 var chars = require('unicode-string/chars')
+var substring = require('unicode-string/substring')
 var substr = require('unicode-string/substr')
 
 var string = 'o 🇨🇦'
@@ -31,6 +32,12 @@ console.log(string.split(''))
 console.log(chars(string))
 => [ 'o', ' ', '🇨🇦' ]
 
+// substring
+console.log(string.substring(2, 3))
+=> �
+console.log(substring(string, 2, 3))
+=> 🇨🇦
+
 // substr
 console.log(string.substr(2, 1))
 => �
@@ -42,9 +49,9 @@ console.log(substr(string, 2, 1))
 
 | compression              |    size |
 | :----------------------- | ------: |
-| unicode-string.js        | 2.03 kB |
-| unicode-string.min.js    |  1.5 kB |
-| unicode-string.min.js.gz |   657 B |
+| unicode-string.js        |  2.5 kB |
+| unicode-string.min.js    | 1.77 kB |
+| unicode-string.min.js.gz |   721 B |
 
 
 ## License
