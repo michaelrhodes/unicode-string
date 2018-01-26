@@ -1,16 +1,16 @@
 # unicode-string
 
-This is a collection of unicode-aware string functions intended to be required as standalone modules.
+a collection of unicode-aware string functions
 
 [![Build status](https://travis-ci.org/michaelrhodes/unicode-string.svg?branch=master)](https://travis-ci.org/michaelrhodes/unicode-string)
 
-## Install
+## install
 
 ```sh
 $ npm install unicode-string
 ```
 
-## Usage
+## use
 
 ```js
 var length = require('unicode-string/length')
@@ -45,15 +45,13 @@ console.log(substr(string, 2, 1))
 => 🇨🇦
 ```
 
-### index.js weight (browserified)
-
-| compression              |    size |
-| :----------------------- | ------: |
-| unicode-string.js        |  2.5 kB |
-| unicode-string.min.js    | 1.77 kB |
-| unicode-string.min.js.gz |   721 B |
+| compression                    |    size |
+| :----------------------------- | ------: |
+| unicode-string/index.js        | 2.43 kB |
+| unicode-string/index.min.js    |  1.7 kB |
+| unicode-string/index.min.js.gz |   699 B |
 
 
-## License
+## obey
 
 [MIT](http://opensource.org/licenses/MIT)

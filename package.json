@@ -1,8 +1,16 @@
 {
   "name": "unicode-string",
-  "version": "1.1.0",
-  "description": "a collection of unicode-aware string functions",
+  "author": "Michael Rhodes",
+  "version": "1.1.1",
   "main": "index.js",
+  "description": "a collection of unicode-aware string functions",
+  "keywords": ["unicode-aware", "string"],
+  "repository": "git://github.com/michaelrhodes/unicode-string",
+  "license": "MIT",
+  "scripts": {
+    "test": "tape test/*.js",
+    "size": "browserify index.js | size-table unicode-string/index"
+  },
   "dependencies": {
     "multichar-regex": "~2.0.0"
   },
@@ -11,26 +19,5 @@
     "size-table": "~0.2.0",
     "tape": "~4.2.2",
     "to-zalgo": "~1.0.0"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "tape test/*.js",
-    "size": "browserify index.js | size-table"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/michaelrhodes/unicode-string"
-  },
-  "keywords": [
-    "unicode-aware",
-    "string"
-  ],
-  "author": "Michael Rhodes",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/michaelrhodes/unicode-string/issues"
-  },
-  "homepage": "https://github.com/michaelrhodes/unicode-string"
+  }
 }

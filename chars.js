@@ -1,7 +1,9 @@
 var multichars = require('multichar-regex')
 var sub = '•'
 
-module.exports = function (string) {
+module.exports = chars
+
+function chars (string) {
   var characters = string
     .replace(multichars, sub)
     .split('')
