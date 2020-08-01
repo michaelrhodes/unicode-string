@@ -36,4 +36,4 @@ console.log(uni.substr(string, 2, 1))
 ```
 
 ## obey
-[MIT](http://opensource.org/licenses/MIT)
+[CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/)

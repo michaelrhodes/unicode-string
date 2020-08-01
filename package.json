@@ -2,7 +2,7 @@
   "name": "unicode-string",
   "version": "1.1.1",
   "main": "index.js",
-  "license": "MIT",
+  "license": "CC0-1.0",
   "dependencies": {
     "multichar-regex": "^2.0.0"
   },
