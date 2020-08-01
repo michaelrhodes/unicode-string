@@ -1,44 +1,37 @@
 # unicode-string
-
 a collection of unicode-aware string functions
 
-[![Build status](https://travis-ci.org/michaelrhodes/unicode-string.svg?branch=master)](https://travis-ci.org/michaelrhodes/unicode-string)
+[![ci](https://travis-ci.org/michaelrhodes/unicode-string.svg?branch=master)](https://travis-ci.org/michaelrhodes/unicode-string)
 
 ## install
-
 ```sh
 $ npm install unicode-string
 ```
 
 ## use
-
 ```js
 var length = require('unicode-string/length')
-var chars = require('unicode-string/chars')
-var substring = require('unicode-string/substring')
+var split = require('unicode-string/split')
 var substr = require('unicode-string/substr')
+var substring = require('unicode-string/substring')
 
 var string = 'o 🇨🇦'
 
-// length
 console.log(string.length)
 => 6
 console.log(length(string))
 => 3
 
-// chars (ie. split(''))
 console.log(string.split(''))
 => [ 'o', ' ', '�', '�', '�', '�' ]
-console.log(chars(string))
+console.log(split(string, ''))
 => [ 'o', ' ', '🇨🇦' ]
 
-// substring
 console.log(string.substring(2, 3))
 => �
 console.log(substring(string, 2, 3))
 => 🇨🇦
 
-// substr
 console.log(string.substr(2, 1))
 => �
 console.log(substr(string, 2, 1))
@@ -53,5 +46,4 @@ console.log(substr(string, 2, 1))
 
 
 ## obey
-
 [MIT](http://opensource.org/licenses/MIT)
