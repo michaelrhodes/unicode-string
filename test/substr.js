@@ -1,17 +1,40 @@
-var test = require('tape')
-var banish = require('to-zalgo/banish')
-var substr = require('../substr')
 var f = require('./fixtures')
+var substr = require('../substr')
+var banish = require('to-zalgo/banish')
 
-test('substr works', function (assert) {
-  assert.equal(banish(substr(f.darkness, 0, 2)), 'he')
-  assert.equal(banish(substr(f.darkness, 3)), 'cometh')
-  assert.equal(substr(f.beast, 0, 3), '6️⃣6️⃣6️⃣')
-  assert.equal(substr(f.beast, 5), 'the number of the beast')
-  assert.equal(substr(f.hell, 0), f.hell)
-  assert.equal(substr(f.hell, 0, 1), '🇫🇷')
-  assert.equal(substr(f.hell, 2, 1), 't')
-  assert.equal(substr(f.hell, 2, -1), '')
-  assert.equal(substr('•••🇨🇦••••', 3, 1), '🇨🇦')
-  assert.end()
-})
+console.assert(
+  banish(substr(f.darkness, 0, 2)) === 'he',
+  'darkness (start, length)'
+)
+console.assert(
+  banish(substr(f.darkness, 3)) === 'cometh',
+  'darkness (start)'
+)
+console.assert(
+  substr(f.beast, 0, 3) ===  '6️⃣6️⃣6️⃣',
+  'beast (start, length)'
+)
+console.assert(
+  substr(f.beast, 5) === 'the number of the beast',
+  'beast (start)'
+)
+console.assert(
+  substr(f.hell, 0) === f.hell,
+  'hell (start)'
+)
+console.assert(
+  substr(f.hell, 0, 1) === '🇫🇷',
+  'hell (start, length)'
+)
+console.assert(
+  substr(f.hell, 2, 1) === 't',
+  'hell (offset, length)'
+)
+console.assert(
+  substr(f.hell, 2, -1) === '',
+  'hell (offset, negative-length)'
+)
+console.assert(
+  substr('•••🇨🇦••••', 3, 1) === '🇨🇦',
+  '•••🇨🇦•••• (offset, length)'
+)

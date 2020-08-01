@@ -1,9 +1,8 @@
-var split = require('./split')
-
 module.exports = substr
 
+var split = require('./split')
+
 function substr (string, start, length) {
-  length = isNaN(length) ? string.length : length
-  var characters = split(string, '').slice(start, start + length)
-  return length < 0 ? '' : characters.join('')
+  return (length = length == null ? string.length : length) < 0 ? '' :
+  split(string, '').slice(start, start + length).join('')
 }

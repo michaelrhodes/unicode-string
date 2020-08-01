@@ -1,13 +1,11 @@
-var split = require('./split')
-var max = Math.max
-
 module.exports = substring
 
+var split = require('./split')
+
 function substring (string, start, end) {
-  end = isNaN(end) ? string.length - 1 : end
-  var characters = split(string, '').slice(
-    max(0, end < start ? (start + (end - start)) : start),
-    max(start, end)
-  )
-  return characters.join('')
+  end = end == null ? string.length - 1 : end
+  return split(string, '').slice(
+    Math.max(0, end < start ? (start + (end - start)) : start),
+    Math.max(start, end)
+  ).join('')
 }

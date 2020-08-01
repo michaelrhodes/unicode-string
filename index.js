@@ -1,6 +1,6 @@
 module.exports = {
-  length: require('./length'),
   split: require('./split'),
+  substring: require('./substring'),
   substr: require('./substr'),
-  substring: require('./substring')
+  length: require('./length')
 }

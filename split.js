@@ -1,19 +1,16 @@
-var multi = require('multichar-regex')
-var code = String.fromCharCode
-
 module.exports = split
+
+var multi = require('multichar-regex')
+var marker = require('./util/marker')
 
 function split (string, point) {
   if (point == null) return [string]
 
-  var n = 0, marker, characters, reindex, match
-  while (string.indexOf(marker = code(n++)) >= 0) {}
-
-  characters = string
-    .replace(multi, marker)
+  var characters = string
+    .replace(multi, marker(string))
     .split(point || '')
 
-  reindex = 0
+  var reindex = 0, match
   while (match = multi.exec(string)) {
     match.index -= reindex
     reindex += match[0].length - 1
