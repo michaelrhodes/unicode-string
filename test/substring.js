@@ -1,4 +1,5 @@
 var f = require('./fixtures')
+var length = require('../length')
 var substring = require('../substring')
 var banish = require('to-zalgo/banish')
 
@@ -19,22 +20,19 @@ console.assert(
   'beast (start)'
 )
 console.assert(
-  substring(f.hell, 0) === f.hell,
+  substring(f.hell, 0) === f.hell.substring(0),
   'hell (start)'
 )
 console.assert(
-  substring(f.hell, 0, 1) === '🇫🇷',
+  substring(f.hell, length(f.hell) - 1, length(f.hell)) ===
+  f.hell.substring(f.hell.length - 4, f.hell.length),
   'hell (start, end)'
 )
 console.assert(
-  substring(f.hell, 2, 1) === ' ',
+  substring(f.hell, 2, 1) === f.hell.substring(2, 1),
   'hell (offset, end)'
 )
 console.assert(
-  substring(f.hell, 2, -1) === '🇫🇷 ',
+  substring(f.hell, 2, -1) === f.hell.substring(2, -1),
   'hell (offset, negative-end)'
-)
-console.assert(
-  substring('•••🇨🇦••••', 3, 1) === '••',
-  '•••🇨🇦•••• (start, end)'
 )

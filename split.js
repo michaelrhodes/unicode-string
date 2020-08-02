@@ -3,14 +3,14 @@ module.exports = split
 var multi = require('multichar-regex')
 var marker = require('./util/marker')
 
-function split (string, point) {
+function split (string, point, characters, reindex, match) {
   if (point == null) return [string]
 
-  var characters = string
+  characters = string
     .replace(multi, marker(string))
     .split(point || '')
 
-  var reindex = 0, match
+  reindex = 0
   while (match = multi.exec(string)) {
     match.index -= reindex
     reindex += match[0].length - 1

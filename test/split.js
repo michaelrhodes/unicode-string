@@ -12,8 +12,8 @@ console.assert(
   'beast'
 )
 console.assert(
-  split(f.hell, '').length === 40 &&
-  f.hell.split('').length === 43,
+  split(f.hell, '').length === 33 &&
+  f.hell.split('').length === 36,
   'hell'
 )
 console.assert(

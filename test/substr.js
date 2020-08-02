@@ -19,22 +19,26 @@ console.assert(
   'beast (start)'
 )
 console.assert(
-  substr(f.hell, 0) === f.hell,
-  'hell (start)'
+  substr(f.hell) === f.hell.substr(),
+  'hell (no-start)'
 )
 console.assert(
-  substr(f.hell, 0, 1) === '🇫🇷',
+  substr(f.hell, 0) === f.hell.substr(0),
+  'hell (zero-start)'
+)
+console.assert(
+  substr(f.hell, 1) === f.hell.substr(1),
+  'hell (positive-start)'
+)
+console.assert(
+  substr(f.hell, -1, 1) === f.hell.substr(-4, 4),
   'hell (start, length)'
 )
 console.assert(
-  substr(f.hell, 2, 1) === 't',
+  substr(f.hell, 2, 1) === f.hell.substr(2, 1),
   'hell (offset, length)'
 )
 console.assert(
-  substr(f.hell, 2, -1) === '',
+  substr(f.hell, 2, -1) === f.hell.substr(2, -1),
   'hell (offset, negative-length)'
-)
-console.assert(
-  substr('•••🇨🇦••••', 3, 1) === '🇨🇦',
-  '•••🇨🇦•••• (offset, length)'
 )

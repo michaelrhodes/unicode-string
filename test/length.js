@@ -12,7 +12,7 @@ console.assert(
   'beast'
 )
 console.assert(
-  length(f.hell) === 40 &&
-  f.hell.length === 43,
+  length(f.hell) === 33 &&
+  f.hell.length === 36,
   'hell'
 )
