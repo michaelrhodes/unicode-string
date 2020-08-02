@@ -5,7 +5,7 @@ a collection of unicode-aware string functions
 
 ## install
 ```sh
-npm install michaelrhodes/unicode-string#2.0.0
+npm install https://michaelrhodes.github.io/unicode-string/2.0.1.tgz
 ```
 
 ## use
