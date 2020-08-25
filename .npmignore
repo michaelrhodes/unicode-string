@@ -1,6 +1,7 @@
 *
 !index.js
 !length.js
+!slice.js
 !split.js
 !substr.js
 !substring.js

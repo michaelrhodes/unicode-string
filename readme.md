@@ -33,6 +33,11 @@ console.log(string.substr(2, 1))
 => �
 console.log(uni.substr(string, 2, 1))
 => 🇨🇦
+
+console.log(string.slice(0, -2))
+=> o 🇨
+console.log(uni.slice(string, 0, -2))
+=> o
 ```
 
 ## obey
