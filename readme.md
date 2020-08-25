@@ -10,34 +10,33 @@ npm install https://pkg.mkr.sx/unicode-string/2.1.0.tgz
 
 ## use
 ```js
-var uni = require('unicode-string')
-
+var unicode = require('unicode-string')
 var string = 'o 🇨🇦'
 
-console.log(string.length)
-=> 6
-console.log(uni.length(string))
-=> 3
+string.length
+> 6
+unicode.length(string)
+> 3
 
-console.log(string.split(''))
-=> [ 'o', ' ', '�', '�', '�', '�' ]
-console.log(uni.split(string, ''))
-=> [ 'o', ' ', '🇨🇦' ]
+string.split('')
+> ['o',' ','\ud83c','\udde8','\ud83c','\udde6']
+unicode.split(string, '')
+> ['o',' ','🇨🇦']
 
-console.log(string.substring(2, 3))
-=> �
-console.log(uni.substring(string, 2, 3))
-=> 🇨🇦
+string.substring(2, 3)
+> '\ud83c'
+unicode.substring(string, 2, 3)
+> '🇨🇦'
 
-console.log(string.substr(2, 1))
-=> �
-console.log(uni.substr(string, 2, 1))
-=> 🇨🇦
+string.substr(2, 1)
+> '\ud83c'
+unicode.substr(string, 2, 1)
+> '🇨🇦'
 
-console.log(string.slice(0, -2))
-=> o 🇨
-console.log(uni.slice(string, 0, -2))
-=> o
+string.slice(0, -2)
+> 'o \ud83c\udde8'
+unicode.slice(string, 0, -2)
+> 'o'
 ```
 
 ## obey
